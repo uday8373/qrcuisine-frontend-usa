@@ -60,8 +60,11 @@ const FoodMenu = ({
       <div className="w-full h-full flex-col max-w-screen-xl relative">
         <div className="w-full flex flex-col px-5 mt-3">
           <div className="w-full flex justify-between items-center gap-3">
-            <h4 className="text-default-800 text-large font-medium line-clamp-1">
-              {selectedTitle}
+            <h4 className="text-default-800 text-large font-medium line-clamp-1 flex items-center gap-1">
+              {selectedTitle}{" "}
+              <span className="text-small font-medium text-default-600">
+                ({`${maxItems}`})
+              </span>
             </h4>
             <div className="flex gap-2 items-center">
               <Button
