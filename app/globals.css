@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shadow-container {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.slick-slider {
+  background-color: transparent;
+}
+
+.slick-list {
+  overflow: visible !important;
+}
+
+.slick-slide {
+  display: flex;
+  padding-left: 6px !important;
+}
+
+input,
+textarea,
+select {
+  font-size: 16px !important;
+}
+
+.rotate-animation {
+  animation: rotate 0.5s ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
