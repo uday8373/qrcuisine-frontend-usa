@@ -46,10 +46,10 @@ export default function PaymentStatus({ orderData, isClaimed }) {
               <h2 className="text-primary text-xl font-bold">
                 {siteConfig?.currencySymbol}
                 {(totalWithGst + Number(orderData.tip_amount)).toFixed(2)}{" "}
-                <span className="text-danger-500 font-medium text-tiny">
-                  ({`Tips & ${siteConfig.taxTitle} inc*`})
-                </span>
               </h2>
+              <h3 className="text-danger-500 font-medium text-tiny -mt-0">
+                ({`Tips & ${siteConfig.taxTitle} inc*`})
+              </h3>
             </div>
             <Chip
               radius="sm"

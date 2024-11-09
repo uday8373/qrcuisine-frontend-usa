@@ -5,7 +5,8 @@ import Received from "@/components/lottie/received.json";
 import Confirm from "@/components/lottie/confirm.json";
 import Preparing from "@/components/lottie/preparing.json";
 import { RotateCw } from "lucide-react";
-const OrderStatus = ({ orderData }) => {
+import { Button } from "@nextui-org/react";
+const OrderStatus = ({ orderData, handleReload, isRotating }) => {
   const [remainingTime, setRemainingTime] = useState(null);
   const { restaurant_id, table_id, status_id } = orderData || {};
   const { logo, restaurant_name } = restaurant_id || {};
@@ -85,7 +86,23 @@ const OrderStatus = ({ orderData }) => {
       <div
         className={`w-full flex flex-col rounded-b-large ${bgColorClass} px-5 bg-opacity-10 relative`}
       >
-        <div className="w-full flex flex-col justify-center items-center gap-1 py-5">
+        <div className="w-full flex flex-col justify-center items-center gap-1 py-5 relative">
+          <div className="absolute top-3 z-10 right-0">
+            <Button
+              color="default"
+              aria-label="Increase"
+              size="sm"
+              variant="faded"
+              onClick={handleReload}
+              className="font-medium text-small border"
+            >
+              Refresh
+              <RotateCw
+                size={14}
+                className={isRotating ? "rotate-animation" : ""}
+              />
+            </Button>
+          </div>
           <div className="w-full flex justify-center flex-col items-center gap-1">
             <h2 className="text-default-600 font-semibold text-xs">
               Order ID : {orderData?.order_id}

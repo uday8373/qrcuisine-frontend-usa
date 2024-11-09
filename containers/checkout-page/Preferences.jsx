@@ -36,7 +36,7 @@ const Preferences = ({ mainInstructions, onOpen, restaurantName, tableId }) => {
               <EditIcon size={20} className="text-default-600 self-start" />
               <div className="flex flex-col w-full">
                 <h3 className="text-small font-medium text-default-600">
-                  Add cooking requests
+                  Add cooking instructions
                 </h3>
                 {mainInstructions && (
                   <h3 className="text-tiny text-default-500 pr-2 mt-1 line-clamp-2 w-full leading-tight">

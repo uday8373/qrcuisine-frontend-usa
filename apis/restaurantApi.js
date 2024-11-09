@@ -97,7 +97,8 @@ export const fetchSubCategoryData = async (restaurantId, categoryId) => {
       .select("*")
       .eq("restaurant_id", restaurantId)
       .eq("category_id", categoryId)
-      .eq("status", true);
+      .eq("status", true)
+      .order("priority", { ascending: true });
 
     if (error) {
       throw error;

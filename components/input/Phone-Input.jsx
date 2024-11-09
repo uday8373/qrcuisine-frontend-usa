@@ -21,9 +21,9 @@ const PhoneInput = ({
 }) => {
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState({
-    name: "India",
-    code: "+91",
-    flag: "https://flagcdn.com/in.svg",
+    name: "USA",
+    code: "+1",
+    flag: "https://flagcdn.com/us.svg",
   });
   const [phoneNumber, setPhoneNumber] = useState(value || "");
 
@@ -92,7 +92,7 @@ const PhoneInput = ({
         size="lg"
         classNames={{ inputWrapper: "h-14" }}
         placeholder="Enter phone number"
-        value={`${selectedCountry.code} ${phoneNumber}`}
+        value={`${selectedCountry.code || countries[0]?.code} ${phoneNumber}`}
         onChange={handlePhoneNumberChange}
         onBlur={onBlur}
         startContent={
@@ -102,8 +102,8 @@ const PhoneInput = ({
                 <Image
                   width={512}
                   height={512}
-                  src={selectedCountry.flag}
-                  alt={`${selectedCountry.name} flag`}
+                  src={selectedCountry.flag || countries[0]?.flag}
+                  alt={`${selectedCountry.name || countries[0]?.name} flag`}
                   className="w-6 h-auto inline-block"
                 />
                 <ChevronsUpDown

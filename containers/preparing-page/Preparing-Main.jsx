@@ -251,24 +251,11 @@ const PreparingMain = () => {
       <Header orderData={orderData} statusData={statusData} userId={userId} />
 
       {orderData?.sub_orders.length < 1 && (
-        <div className="relative">
-          <div className="absolute top-2 z-10 right-5">
-            <Button
-              color="default"
-              aria-label="Increase"
-              size="sm"
-              variant="faded"
-              onClick={handleReload}
-            >
-              Refresh{" "}
-              <RotateCw
-                size={20}
-                className={isRotating ? "rotate-animation" : ""}
-              />
-            </Button>
-          </div>
-          <OrderStatus orderData={orderData} />
-        </div>
+        <OrderStatus
+          orderData={orderData}
+          handleReload={handleReload}
+          isRotating={isRotating}
+        />
       )}
       {notifications.length > 0 && (
         <NotificationList
@@ -290,23 +277,10 @@ const PreparingMain = () => {
             orderData={orderData}
             statusData={statusData}
             notifications={notifications}
+            handleReload={handleReload}
+            isRotating={isRotating}
           />
           <SubOrders orderData={orderData} statusData={statusData} />
-          <div className="absolute -top-1 right-5 ">
-            <Button
-              color="default"
-              aria-label="Increase"
-              size="sm"
-              variant="ghost"
-              onClick={handleReload}
-            >
-              Refresh{" "}
-              <RotateCw
-                size={20}
-                className={isRotating ? "rotate-animation" : ""}
-              />
-            </Button>
-          </div>
         </div>
       )}
       <CallWaiterButton orderData={orderData} />

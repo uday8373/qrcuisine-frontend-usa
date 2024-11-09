@@ -1,10 +1,16 @@
 import OrderPreview from "@/components/modal/Order-Preview";
 import { Button, Progress, useDisclosure } from "@nextui-org/react";
-import { CircleX, ReceiptText } from "lucide-react";
+import { CircleX, ReceiptText, RotateCw } from "lucide-react";
 import moment from "moment";
 import React, { useEffect, useState } from "react";
 
-const MainOrder = ({ orderData, statusData, notifications }) => {
+const MainOrder = ({
+  orderData,
+  statusData,
+  notifications,
+  handleReload,
+  isRotating,
+}) => {
   const [remainingTime, setRemainingTime] = useState(null);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -39,11 +45,31 @@ const MainOrder = ({ orderData, statusData, notifications }) => {
   return (
     <section id="suborder">
       <div
-        className={`w-full flex flex-col gap-1 px-5 ${
+        className={`w-full flex flex-col gap-2 px-5 ${
           notifications.length < 1 && "mt-3"
         }`}
       >
-        <h2 className="text-default-700 font-medium text-medium">My Orders</h2>
+        <div className="w-full flex justify-between items-center">
+          <h2 className="text-default-700 font-medium text-medium">
+            My Orders
+          </h2>
+
+          <Button
+            color="default"
+            aria-label="Increase"
+            size="sm"
+            variant="faded"
+            onClick={handleReload}
+            className="font-medium text-small border"
+          >
+            Refresh
+            <RotateCw
+              size={14}
+              className={isRotating ? "rotate-animation" : ""}
+            />
+          </Button>
+        </div>
+
         <div className="w-full flex flex-col gap-3">
           <div className="w-full flex flex-col bg-default-100 rounded-large px-3 py-4 border justify-between items-center gap-5">
             <div className="w-full flex justify-between items-center">
