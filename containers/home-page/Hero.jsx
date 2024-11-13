@@ -26,12 +26,12 @@ export default function Hero() {
             className="z-[15] absolute top-0 -right-24 fill-primary-400 md:flex hidden"
           />
           <div className="flex items-center relative justify-center flex-col 3xl:gap-9 gap-7 text-center z-20">
-            <h3 className="3xl:text-xl underline-offset-4 tracking-wide underline text-default-600 font-medium decoration-default-600">{`FOR FULL SERVICE RESTAURANT’S `}</h3>
+            <h3 className="3xl:text-xl underline-offset-4 tracking-wide underline text-default-600 font-medium decoration-default-600">{`QR CUISINE USA `}</h3>
             <div className="space-y-4">
               <h2 className="text-3xl md:text-6xl 3xl:text-7xl font-bold text-default-900 leading-relaxed md:leading-tight 3xl:leading-snug text-balance">
-                We ensure{` restaurant's `}
+                Table Ordering Contactless
                 <br />
-                sustainability & Growth
+                With AI Technology
               </h2>
             </div>
             <div className="flex w-full justify-center items-center z-40">
@@ -47,8 +47,8 @@ export default function Hero() {
             </div>
 
             <p className="text-balance font-medium max-w-lg text-default-700 3xl:text-xl">
-              QRCuisine helps restaurants save costs, gain real-time analytics,
-              and boost efficiency with smart technology
+              Unlock the full potential of dine-in service with the ultimate QR
+              code table ordering solution.
             </p>
             <div className="space-y-2">
               <Button

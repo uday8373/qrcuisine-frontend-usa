@@ -47,7 +47,7 @@ export default function HelpsRestaurants() {
             <div className="flex items-center w-full h-full relative justify-center ">
               <Safari
                 src="/mockup/mockup1.png"
-                url="business.qrcuisine.com"
+                url="usa-business.qrcuisine.com"
                 className="size-full z-[5]"
               />
               <CircleElement

@@ -3,9 +3,9 @@ import { AlarmClockCheck, HandPlatter, UserCheck } from "lucide-react";
 
 export const HelpsRestaurantsData = [
   {
-    title: "Smooth ordering experience with less human need",
+    title: "Staff Shortages we address that",
     description:
-      "Customers can scan a QR code to order directly from their table, making the process faster and hassle-free.",
+      "Provide a seamless ordering experience where customers scan a QR code to order directly from their table, minimizing staff.",
     icon: HandPlatter,
   },
   {
