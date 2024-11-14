@@ -16,7 +16,7 @@ export default function Home() {
       <ControlOrders />
       <Analytics />
       <Orders />
-      {/* <Pricing /> */}
+      <Pricing />
       <Footer />
     </main>
   );

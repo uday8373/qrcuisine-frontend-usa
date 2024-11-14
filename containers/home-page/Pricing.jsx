@@ -28,7 +28,8 @@ export default function Pricing() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16 pt-5 w-full relative overflow-hidden items-center ">
           <div className="bg-primary-100 py-8 px-10 rounded-xl flex justify-center  gap-5 flex-col">
             <h3 className="font-bold text-3xl text-default-900">
-              Free for the first <br />3 Months
+              Schedule a <br />
+              Consultation
             </h3>
             <p className="text-lg text-default-700">
               Try it with no loose. We are confident on our product and we will
@@ -40,16 +41,16 @@ export default function Pricing() {
             <div className="pt-5 w-full justify-center items-center flex">
               <Button
                 as={Link}
-                href="/restaurant-registration"
+                href="/book-free-demo"
                 size="lg"
                 variant="solid"
                 color="primary"
                 fullWidth
                 radius="sm"
                 endContent={<ChevronsRight />}
-                className={`text-small px-10  font-semibold shadow-sm `}
+                className={`text-small px-10  font-semibold shadow-sm uppercase`}
               >
-                REGISTER NOW
+                Book Free Demo
               </Button>
             </div>
           </div>
@@ -70,13 +71,27 @@ export default function Pricing() {
               marketer.
             </p>
 
-            <div className="pt-5 w-full justify-center flex-col  gap-2 flex">
+            {/* <div className="pt-5 w-full justify-center flex-col  gap-2 flex">
               <h3 className="text-primary font-bold text-lg">
                 Monthly subscription
               </h3>
               <p className="text-primary font-bold text-3xl">
                 Rs. 3999 / Month
               </p>
+            </div> */}
+            <div className="pt-5 w-full justify-start items-end flex mt-auto">
+              <Button
+                as={Link}
+                href="/restaurant-registration"
+                size="lg"
+                variant="solid"
+                color="primary"
+                radius="sm"
+                endContent={<ChevronsRight />}
+                className={`text-small px-10  font-semibold shadow-sm `}
+              >
+                REGISTER NOW
+              </Button>
             </div>
             <Image
               src="/mockup/cta-element.png"

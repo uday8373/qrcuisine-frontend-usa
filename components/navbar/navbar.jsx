@@ -94,6 +94,17 @@ export const Navbar = () => {
       <NavbarContent className="basis-1 hidden sm:flex" justify="end">
         <NavbarItem>
           <Button
+            color="primary"
+            href="/login"
+            as={Link}
+            variant="text"
+            className="font-medium w-28 text-primary-500 underline underline-offset-2"
+          >
+            Login Now
+          </Button>
+        </NavbarItem>
+        <NavbarItem>
+          <Button
             href="/book-free-demo"
             color="secondary"
             as={Link}
@@ -118,16 +129,16 @@ export const Navbar = () => {
       <NavbarMenu onClose={toggleMenu} className="z-50 pt-5">
         {siteConfig.navMenuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <ScrollLink
+            <Link
               className="cursor-pointer"
-              to={item.href}
+              href={item.href}
               smooth={true}
               duration={500}
               onClick={handleMenuClose}
               offset={-40}
             >
               {item.label}
-            </ScrollLink>
+            </Link>
           </NavbarMenuItem>
         ))}
         <NavbarContent className="flex w-full items-start py-5 justify-center">

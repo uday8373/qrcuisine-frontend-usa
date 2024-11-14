@@ -17,9 +17,13 @@ export const siteConfig = {
       label: "Home",
       href: "/",
     },
+    // {
+    //   href: "Pricing",
+    //   label: "Pricing",
+    // },
     {
-      href: "Pricing",
-      label: "Pricing",
+      href: "/login",
+      label: "Login",
     },
   ],
   isProduction: true,

@@ -52,7 +52,7 @@ export default function SmarterOrdering() {
               endContent={<MoveRight />}
               className={`text-medium 3xl:text-lg px-10 mt-3 font-semibold shadow-sm w-fit`}
             >
-              Try free for 3 months
+              Schedule a Consultation
             </Button>
           </div>
         </div>
