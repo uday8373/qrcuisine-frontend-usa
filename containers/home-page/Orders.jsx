@@ -32,7 +32,7 @@ export default function Orders() {
               height={2080}
               alt="Laptop"
               src="/mockup/mockup6.png"
-              className="w-full h-full lg:-mt-20"
+              className="w-full h-full lg:-my-20"
             />
           </div>
         </div>

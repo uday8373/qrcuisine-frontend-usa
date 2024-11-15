@@ -61,7 +61,7 @@ export default function Hero() {
                 className={`text-medium px-7 font-semibold 3xl:text-lg`}
                 endContent={<MoveRight size={20} />}
               >
-                Try free for 3 months
+                Schedule a Consultation
               </Button>
               <p className="text-[13px] 3xl:text-md font-semibold text-default-700">{`Trusted by 100’s of restaurants`}</p>
             </div>

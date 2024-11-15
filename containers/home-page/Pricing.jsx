@@ -32,12 +32,12 @@ export default function Pricing() {
               Consultation
             </h3>
             <p className="text-lg text-default-700">
-              Try it with no loose. We are confident on our product and we will
-              make you do so.
+              Let our team create a custom AI-driven solution tailored for your
+              Restaurant, Grill & Bar, Cafe, and more!
             </p>
-            <h4 className="text-lg text-default-700 font-semibold">
+            {/* <h4 className="text-lg text-default-700 font-semibold">
               Explore our awesome tools and services without paying.
-            </h4>
+            </h4> */}
             <div className="pt-5 w-full justify-center items-center flex">
               <Button
                 as={Link}
@@ -64,11 +64,11 @@ export default function Pricing() {
             />
 
             <h3 className="font-bold text-4xl text-default-900 gap">
-              We cost less then a waiter
+              Our AI-driven solution provides
             </h3>
-            <p className="text-xl leading-snug text-default-600 font-semibold ">
-              and serve more then a manager, analyst and <br />
-              marketer.
+            <p className="text-xl leading-snug text-default-600 font-normal ">
+              your business with comprehensive support—streamlining service,
+              analyzing data, and enhancing marketing at a fraction of the cost.
             </p>
 
             {/* <div className="pt-5 w-full justify-center flex-col  gap-2 flex">
@@ -79,7 +79,7 @@ export default function Pricing() {
                 Rs. 3999 / Month
               </p>
             </div> */}
-            <div className="pt-5 w-full justify-start items-end flex mt-auto">
+            <div className="pt-0 w-full justify-start items-end flex mt-auto">
               <Button
                 as={Link}
                 href="/restaurant-registration"
